@@ -1,0 +1,135 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.MapContainer {
+    height: 100%;
+    position: relative;
+}
+
+#NeighborhoodMap {
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+}
+
+.location-list {
+    padding: 0;
+    margin: 5px;
+}
+
+.search-area {
+    font-size: 1.0em;
+}
+
+.search-area {
+    float: left;
+    max-height: 100%;
+    overflow: auto;
+    z-index: 2;
+    background-color: #ffffff;
+    opacity: 0.8;
+    margin: 25px;
+}
+
+.venue-item {
+    padding: 5px;
+    margin: 0;
+    /*background-color: #ffffff;*/
+    list-style-type: none;
+    border: solid #fcbe2c 1px;
+}
+
+.venue-item:hover {
+    background-color: #fcbe2e;
+    color: #ffffff;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 1em;
+}
+
+.navColor{
+    background-color: gainsboro;
+}
+
+.tips li {
+    padding-bottom: 10px;
+}
+
+/* Side Nav - Start */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: lightslategray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: #ffffff;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818182;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f2;
+}
+
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.link {
+    cursor: pointer;
+    color: powderblue;
+}
+
+.leftIcon {
+    font-size: 30px;
+    cursor: pointer
+}
+
+#Title {
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 10px;
+    color: royalblue;
+    background-color: gainsboro;
+}
+
+.errorMessage {
+    color: darkred;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+}

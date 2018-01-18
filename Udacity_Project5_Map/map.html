@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Udacity Map Project - Neighborhood Map</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header role="banner">
+        <div id="Title">
+            *Udacity Map Project - Neighborhood Map*
+        </div>
+
+        <nav class="navColor">
+            <div id="Sidenav" class="sidenav">
+                <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+                <br>
+                <input class="search-input" placeholder="Search..." type="text" data-bind="value: query, valueUpdate: 'keyup'">
+
+                <h3>Available Venues:</h3>
+                <ol data-bind="foreach: search">
+                    <li class="link"><span data-bind="text: title, click: openInfowindow"></span></li>
+                </ol>
+                <script type="text/html" id="location">
+                    <li class="venue-item" data-bind="text: title, click: openInfowindow"></li>
+                </script>
+            </div>
+            <span class="leftIcon" onclick="openNav()">&#9776;</span>
+        </nav>
+    </header>
+
+    <div class="MapContainer">
+        <!-- Map Rendering -->
+        <div id="NeighborhoodMap"></div>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Appicaltion settings -->
+    <script async defer onerror="mapError()" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1hWhyhWDrEmdo54zRa7ygCzkLMYvP8q4&v=3&callback=initNeighborhoodMap"></script>
+</body>
+
+</html>
